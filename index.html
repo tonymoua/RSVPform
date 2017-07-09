@@ -1,6 +1,6 @@
 <?php
 
-if($_POST["submit"]) {
+if($_POST["accept"]) {
     $recipient="your@email.address";
     $subject="RSVP";
     $name=$_POST["name"];
@@ -27,13 +27,13 @@ if($_POST["submit"]) {
 <body>
   <div class="top">
   </div>
-  <form method ="post" action="/Users/tonymoua/Desktop/RSVPform/index.html">
+  <form method ="post" action="/RSVPform/index.html">
    <?=$thankYou ?>
 
     <div class ="info">
     <h1>RSVP</h1>
     <h2>for the wedding of</h2>
-    <h1>Maider Xiong and Tony Xeng Moua</h1>
+    <h1>Maider Xiong <br>& <br>Tony Xeng Moua</h1>
       <p class= "line">________________________________________</p>
       <h2>The Details</h2>
       <p>Saturday, June 18, 2016</p>
@@ -47,10 +47,10 @@ if($_POST["submit"]) {
     <input type="text" placeholder="Name" name="name">
     <input type="number" placeholder="# of Guests" name="number">
     </div>
-    <input type="submit" name="submit">
+    <!--<input type="submit" name="submit">-->
     
     
-    <!--<button class ="accept">Accept</button> -->
+    <button class ="accept">Accept</button> 
 
       
   </form>
