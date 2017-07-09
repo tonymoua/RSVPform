@@ -1,0 +1,59 @@
+<?php
+
+if($_POST["submit"]) {
+    $recipient="your@email.address";
+    $subject="RSVP";
+    $name=$_POST["name"];
+    $number=$_POST["number"];
+
+    $mailBody="Name: $sender\nEmail: $senderEmail\n\n$message";
+
+    mail($recipient, $subject, $mailBody, "From: $sender <$senderEmail>");
+
+    $thankYou="<p>Thank you! Your message has been sent.</p>";
+}
+
+?>
+
+<!DOCTYPE html>
+<html lang="en"> 
+
+<head>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700,800,900">
+<link href='https://fonts.googleapis.com/css?family=Great+Vibes' rel='stylesheet' type='text/css'>
+</head>
+ 
+<body>
+  <div class="top">
+  </div>
+  <form method ="post" action="/Users/tonymoua/Desktop/RSVPform/index.html">
+   <?=$thankYou ?>
+
+    <div class ="info">
+    <h1>RSVP</h1>
+    <h2>for the wedding of</h2>
+    <h1>Maider Xiong and Tony Xeng Moua</h1>
+      <p class= "line">________________________________________</p>
+      <h2>The Details</h2>
+      <p>Saturday, June 18, 2016</p>
+      <p>5:00 PM</p>
+      <br>
+      <h2>Ceremony & Reception</h2>
+      <p>Trezzi Farms</p>
+      <p>17710 N. Dunn Road, Colbert Wa</p>
+           <p class= "line">________________________________________</p>
+
+    <input type="text" placeholder="Name" name="name">
+    <input type="number" placeholder="# of Guests" name="number">
+    </div>
+    <input type="submit" name="submit">
+    
+    
+    <!--<button class ="accept">Accept</button> -->
+
+      
+  </form>
+</body>
+
+</html>
